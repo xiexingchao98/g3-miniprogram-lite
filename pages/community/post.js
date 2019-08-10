@@ -41,7 +41,7 @@ Page({
   doComment(e) {
     wx.request({
       method: 'POST',
-      url: app.globalData.serverPath + '/database/post/doComment',
+      url: app.globalData.serverPath + '/post/doComment',
       data: {
         // 用户身份验证信息
         storage: wx.getStorageSync(app.globalData.storageKey),
