@@ -2,6 +2,12 @@
 
 == 使用
 
+=== 服务端搭建
+
+请参阅 https://github.com/xiexingchao98/g3-nodejs-lite
+
+=== 客户端使用
+
 克隆仓库
 
   git clone https://github.com/xiexingchao98/g3-miniprogram-lite.git
@@ -15,6 +21,11 @@
 serverPath: 'http://127.0.0.1:8360',    // 服务器地址
 socketServerPath: 'ws://120.0.0.1:8360/ws',    // websocket 版服务器地址
 ....
+
+[NOTE]
+====
+测试服务器地址： http://120.78.163.56:8360
+====
 
 安装依赖
 
