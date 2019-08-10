@@ -1,0 +1,31 @@
+<view class="page" style="padding-bottom: calc(50px + {{ safePaddingBottom }}px)">
+  <view class='page__hd page__hd_shadow-light'>
+    <van-search placeholder='请输入搜索关键字' bind:search="onSearch"/>
+  </view>
+  <view class='page__bd'>
+    <swiper indicator-dots='true' autoplay='true'>
+      <swiper-item wx:for='{{ swiperImages }}'>
+        <image class='swiper-item__image-size-inherit' src="{{ item }}" mode="aspectFill"></image>
+      </swiper-item>
+    </swiper>
+    <view class="menu menu_shadow-light">
+      <navigator wx:for='{{ menuItems }}' url='{{ item.url }}' class="menu__item menu__item_size-m" hover-class="menu__item_active">
+        <view class="menu__icon">
+          <i class="material-icons md-24 md-dark" style="color: {{ item.color ? item.color : '' }}">{{ item.icon }}</i>
+        </view>
+        <view class='menu__text menu__text_size-m'>{{ item.text }}</view>
+      </navigator>
+    </view>
+    
+    <!-- 商品推荐列表 -->
+    <view class="commodity-wrapper commodity-wrapper_theme-primary">
+      <navigator wx:for='{{ commodityList }}' class="commodity commodity_theme-primary" url='/pages/commodity/commodity?id={{ item.commodity_id }}'>
+        <image src='{{ item.commodity_cover }}' mode='scaleToFill' class="commodity__cover commodity__cover_size-m"></image>
+        <view class="commodity__info">
+          <view class="commodity__name">{{ item.commodity_name }}</view>
+          <view class="commodity__price">{{ item.commodity_price }}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

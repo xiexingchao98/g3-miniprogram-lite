@@ -1,0 +1,38 @@
+<view class="page" style="position: relative">
+  <view class='page__hd'></view>
+  <view class='page__bd' style="padding-bottom: 180rpx">
+    <view class="commodity">
+      <swiper class="" indicator-dots='true'>
+        <swiper-item>
+          <image src="{{ commodity.commodity_cover }}"></image>
+        </swiper-item>
+      </swiper>
+      <view class="commodity__info commodity__info_direction-row">
+        <view class="commodity__name" style="font-size: 12pt">{{ commodity.commodity_name }}</view>
+        <view class="price"><text class='price__number price__number_size-m'>{{ commodity.commodity_price }}</text></view>
+      </view>
+      <view class="commodity__attribute">
+        <i class="material-icons md-dark md-24">label</i>
+        <view class="commodity__tag-list">
+          <view wx:for='{{ commodity.commodity_tag }}' class="commodity__tag">{{ item.tag_name }}</view>
+        </view>
+      </view>
+      <van-tabs swipeable sticky>
+        <van-tab title='介绍'>
+          <view class="tab-content">
+            {{ introduction }}
+          </view>
+        </van-tab>
+        <van-tab title='成分'>
+          <view class="tab-content">
+            {{ ingredient }}
+          </view>
+        </van-tab>
+      </van-tabs>
+    </view>
+  </view>
+  <view class='buttons' style="position: fixed; bottom: 0; background: #fff; box-shadow: 0 -1px 3px lightgray">
+    <view class="button button_theme-light button_shape-rounded" hover-class='button_theme-light_active' bind:tap='doAddToCart'>加入购物车</view>
+    <view class="button button_theme-buy button_shape-rounded" hover-class="button_theme-buy_active" bind:tap='doBuy'>购买</view>
+  </view>  
+</view>

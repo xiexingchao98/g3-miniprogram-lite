@@ -1,0 +1,29 @@
+<view class="page" style="padding-bottom: calc(50px + 48px + {{ safePaddingBottom }}px)">
+  <view class="page__hd" style="display: flex; border-bottom: 1px dotted #eee">
+    <view style="flex: 1 1;">
+    <van-search class="search" placeholder='请输入搜索关键字' bind:search="onSearch"/>
+    </view>
+    <navigator url='/pages/community/unread-message' class="message" style="position: relative; margin-right: 32rpx;">
+      <i class='material-icons md-24 md-dark'>markunread</i>
+      <text class="message__red-circle {{ unreadMessageCount == 0 ? 'disable' : ''}}">{{ unreadMessageCount }}</text>
+    </navigator>
+  </view>
+  <view class="page__bd" style="margin: 48rpx 0">
+    <navigator wx:for='{{ postList }}' url='/pages/community/post?id={{ item.post_id }}' class="post-preview">
+      <h3 class="title post__title">{{ item.post_title }}</h3>
+      <view class='post__comment-count'>{{ item.post_comment_count }}</view>
+      <view class="post-preview__footer">
+        <view class="post__timeinfo">
+          <view class="post__create-time">{{ item.create_time}} </view>
+          <!-- <view class="post__last-comment-time">{{ item.last_comment_time }} </view> -->
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="buttons" style="position: fixed; bottom: 50px; left: 0">
+    <view class="button button_theme-primary button_size-m" hover-class="button_theme-primary_active" bind:tap='showReleaseNewPostPanel'>
+      <i class="material-icons md-24">add</i>
+      <text>发布</text>
+    </view>
+  </view>
+</view>

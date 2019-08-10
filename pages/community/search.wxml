@@ -1,0 +1,9 @@
+<view>已找到{{postList.length}}搜索结果</view>
+<navigator wx:for='{{ postList }}' url='/pages/post/post?id={{ item.post_id }}' class="post-preview">
+      <h3 class="title post__title">{{ item.post_title }}</h3>
+      <view class="post-preview__footer">
+        <view class="post__timeinfo">
+          <view class="post__create-time">{{ item.create_time}} </view>
+        </view>
+      </view>
+</navigator>

@@ -1,0 +1,12 @@
+<view class="page">
+  <view class="hero hero_theme-orangered">热门商品</view>
+  <view class="commodity-wrapper commodity-wrapper_theme-primary">
+    <navigator wx:for='{{ commodityList }}' class="commodity commodity_theme-primary" url='/pages/commodity/commodity?id={{ item.commodity_id }}'>
+      <image src='{{ item.commodity_cover }}' mode='scaleToFill' class="commodity__cover commodity__cover_size-m"></image>
+      <view class="commodity__info">
+        <view class="commodity__name">{{ item.commodity_name }}</view>
+        <view class="commodity__price">{{ item.commodity_price }}</view>
+      </view>
+    </navigator>
+  </view>
+</view>

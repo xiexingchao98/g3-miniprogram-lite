@@ -1,0 +1,181 @@
+/* 
+ * 重构规则区域
+ * 日期：2019/7/24
+ */
+
+
+page {
+  background-color: #F5F5F5;
+}
+
+.page{
+  padding-top: 12rpx;
+}
+
+.user-profile {
+  z-index: 2;
+  padding: 24rpx 0;
+}
+
+.user-profile__background {
+  width: 100%;
+  height: 380rpx;
+  position: absolute;
+  left: 0;
+  top:0;
+  border-radius: 0 0 60% 60%;
+  background: #FF69B4;
+  z-index: 1;
+}
+
+.user-profile__header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 36rpx;
+}
+
+.user-profile__body {
+  padding: 20rpx 20rpx 20rpx 40rpx;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px dotted #eee;
+}
+
+.user-profile__basic-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-profile__social-data {
+  flex: 1 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.user-profile__skin-test-history,
+.user-profile__skin-state-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-profile__following::before {
+  content: '关注';
+  margin-right: 6rpx;
+}
+
+.user-profile__follower::before {
+  content: '粉丝';
+  margin-right: 6rpx;
+}
+
+.image_type-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 999px;
+  margin: 0 18rpx;
+  vertical-align: middle;
+}
+
+.text_type-nickname {
+  color: rgba(0,0,0,.65);
+  font-size: 10pt;
+  letter-spacing: 2rpx;
+}
+
+.user-profile, .my-order, .app-option {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border-radius: 8rpx;
+  box-shadow: 0rpx 20rpx 25rpx -8rpx #DCDCDC,
+              10rpx 20rpx 25rpx -8rpx #DCDCDC,
+              -10rpx 20rpx 25rpx -8rpx #DCDCDC;
+  margin: 36rpx;
+}
+
+.user-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-order {
+  position: relative;
+}
+
+.my-order::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(45deg, #8b00dd, #cd00ea, #e98df5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.my-order__header {
+  display: flex;
+  padding: 20rpx;
+}
+
+ .my-order__body {
+   display: flex;
+   align-items: center;
+ }
+
+ .my-order__genre {
+   flex: 1 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 36rpx 0;
+ }
+
+ .my-order__text {
+   font-size: 10pt;
+ }
+
+ .my-order__title {
+   flex: 1 1;
+   font-size: 11pt;
+ }
+
+ .my-order__view-all {
+   font-size: 10pt;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .app-option__item {
+   display: flex;
+   align-items: center;
+   padding: 18rpx 36rpx;
+   position: relative;
+ }
+
+.app-option__item::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #eee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.app-option__item:last-child::after {
+  width: 0;
+  height: 0;
+}
+
+ .app-option__text {
+   padding: 12rpx 36rpx;
+ }

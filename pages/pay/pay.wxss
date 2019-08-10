@@ -1,0 +1,69 @@
+.submit-bar {
+  position: fixed;
+  bottom: 0;
+  z-idnex: 9;
+  background: #fff;
+  box-shadow: 0 0 24rpx #cecece;
+}
+.shipping-address,
+.commodity,
+.billing {
+  border-radius: 24rpx;
+  box-shadow: 0 12rpx 48rpx  -8rpx #cecece;
+  padding: 12rpx 24rpx;
+  margin: 24rpx 12rpx 48rpx 12rpx;
+  background: #fff;
+}
+
+.billing__field {
+  display: flex;
+  justify-content: space-between;
+  margin: 12rpx 0;
+  padding: 6rpx 24rpx;
+}
+
+.billing__label {
+  font-size: 10pt;
+}
+
+.billing__number {
+  font-family: 'Times New Roman', Times, serif;
+  color: rgba(0,0,0,.65);
+}
+
+.billing__number::before {
+  content: '￥';
+  font-size: 9pt;
+}
+
+.billing__number_type-coupon {
+}
+
+.billing__number_type-coupon::before {
+  content: '-￥';
+  font-size: 9pt;
+}
+
+.billing__number_type-total {
+  font-size: 14pt;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.shipping-address {
+  display: flex;
+}
+
+.shipping-address__body {
+  flex: 1 1;
+  font-size: 10pt;
+}
+
+.shipping-address__switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24rpx;
+}

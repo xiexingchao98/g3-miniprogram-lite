@@ -1,0 +1,25 @@
+<view class="post">
+  <view class="post__header">
+    <view class="post__title">{{ post.post_title }}</view>
+    <view class="post__content"> <text>{{ post.post_content }}</text> </view>
+    <view class="post__owner-name">{{ post.post_owner_name }}</view>
+    <view class='post__create-time'>{{ post.create_time }}</view>
+    <!-- <view class='post__last-comment-time'>{{ post.last_comment_time }}</view> -->
+  </view>
+
+  <view class="comment-list">
+    <view wx:for='{{ commentList }}' class="comment">
+      <view class="storey">{{ index + 1 }}</view>
+      <view class="comment__content"> {{ item.comment_content }}</view>
+      <view class="comment__owner-name">{{ item.comment_owner_name }}</view>
+      <view class="comment__create-time">{{ item.create_time }}</view>
+    </view>
+  </view>
+
+  <form bind:submit='doComment' style="position: fixed; left: 0; bottom: 0; width: 100%; background: #fff; ">
+    <view class="interaction-menu">
+      <input class='input input_style-inline' type="text" name='comment_content' style="margin-right: 18rpx; flex: 1 1;" value='{{ comment_content }}'/>
+      <button class="button button_style-inline button_theme-blue" hover-class="button_theme-blue_active" form-type='submit'>发布</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,12 @@
+<form bind:submit='doReleaseNewPost'>
+  <label>标题</label>
+  <input type="text" class="input" name='post_title'/>
+  <label>内容</label>
+  <textarea class='textarea' name='post_content' maxlength="6000" auto-height="true" rows='40'></textarea>
+  <!-- <label>话题</label>
+  <input type="text" class="input" name='post_topic'/> -->
+  <view class="buttons">
+    <button class='button button_theme-primary' hover-class='button_theme-primary_active' form-type='submit'>提交</button>
+    <button class="button button_theme-light" hover-class='button_theme-light_active' bind:tap='doBack'>取消</button>
+  </view>
+</form>

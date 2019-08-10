@@ -1,0 +1,42 @@
+<view class="page" style="background: #f5f5f5; padding-top: 24rpx; padding-bottom: 180rpx;">
+  <view class="page__hd"></view>
+  <view class="page__bd">
+    <view class="shipping-address">
+      <view class='shipping-address__body'>
+        <view class="shipping-address__receiver">{{ shipping_address.receiver }}</view>
+        <view class="shipping-address__phone">{{ shipping_address.phone }}</view>
+        <view class="shipping-address__address">{{ shipping_address.address }}</view>
+      </view>
+      <view class="shipping-address__switcher">
+        <i class="material-icons md-24 md-dark">chevron_right</i>
+      </view>
+    </view>
+    <view class="commodity">
+      <view class="card-wrapper" wx:for='{{ commodityList }}' style="margin: 18rpx 0;">
+        <van-card num='{{ item.num }}' price='{{ item.price }}' desc='{{ item.desc }}' title='{{ item.title }}' thumb='{{ item.thumb }}' custom-class='bg-white' />
+      </view>
+    </view>
+    <view class="billing">
+      <view class="billing__field">
+        <view class="billing__label">商品金额</view>
+        <view class="billing__number">199</view>
+      </view>
+      <view class="billing__field">
+        <view class="billing__label">优惠</view>
+        <view class="billing__number billing__number_type-coupon">10</view>
+      </view>
+      <view class="billing__field">
+        <view class="billing__label">运费</view>
+        <view class="billing__number">10</view>
+      </view>
+      <view class="billing__field">
+        <view class="billing__label">总计</view>
+        <view class="billing__number billing__number_type-total">1999999</view>
+      </view>           
+    </view>
+  </view>
+  <view class="submit-bar buttons">
+    <view class="button button_theme-light button_shape-rounded" hover-class="button_theme-light_active">取消订单</view>
+    <view class="button button_theme-pay button_shape-rounded" hover-class="button_theme-pay_active">去支付</view>
+  </view>
+</view>

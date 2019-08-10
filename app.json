@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/hot",
+    "pages/index/latest",
+    "pages/index/brand",
+    "pages/index/brand-commodity",
+    "pages/index/search",
+    "pages/community/community",
+    "pages/community/post",
+    "pages/community/search",
+    "pages/community/edit-post",
+    "pages/community/unread-message",
+    "pages/my/my",
+    "pages/pay/pay",
+    "pages/commodity/commodity"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "G3 Project",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index"
+      },
+      {
+        "pagePath": "pages/my/my"
+      },
+      {
+        "pagePath": "pages/community/community"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "/miniprogram_npm/vant-weapp/button/index",
+    "van-search": "/miniprogram_npm/vant-weapp/search/index",
+    "van-tabbar": "/miniprogram_npm/vant-weapp/tabbar/index",
+    "van-tabbar-item": "/miniprogram_npm/vant-weapp/tabbar-item/index",
+    "van-icon": "/miniprogram_npm/vant-weapp/icon/index",
+    "van-tabs": "/miniprogram_npm/vant-weapp/tabs/index",
+    "van-tab": "/miniprogram_npm/vant-weapp/tab/index",
+    "van-card": "/miniprogram_npm/vant-weapp/card/index",
+    "van-steps": "/miniprogram_npm/vant-weapp/steps/index",
+    "van-notice-bar": "/miniprogram_npm/vant-weapp/notice-bar/index",
+    "van-nav-bar": "/miniprogram_npm/vant-weapp/nav-bar/index",
+    "van-submit-bar": "/miniprogram_npm/vant-weapp/submit-bar/index",
+    "van-stepper": "/miniprogram_npm/vant-weapp/stepper/index",
+    "van-checkbox": "/miniprogram_npm/vant-weapp/checkbox/index",
+    "van-checkbox-group": "/miniprogram_npm/vant-weapp/checkbox-group/index",
+    "van-badge": "/miniprogram_npm/vant-weapp/badge/index",
+    "van-badge-group": "/miniprogram_npm/vant-weapp/badge-group/index"
+  }
+}

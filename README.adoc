@@ -1,0 +1,27 @@
+= g3-miniprogram-lite
+
+== 使用
+
+克隆仓库
+
+  git clone https://github.com/xiexingchao98/g3-miniprogram-lite.git
+
+微信开发者工具导入项目，AppID 请填写为你自己小程序的 AppID
+
+编辑服务器地址
+
+.app.js
+....
+serverPath: 'http://127.0.0.1:8360',    // 服务器地址
+socketServerPath: 'ws://120.0.0.1:8360/ws',    // websocket 版服务器地址
+....
+
+安装依赖
+
+  npm i
+
+构建
+
+  工具栏 -> 构建 npm
+
+🎉Enjoy~

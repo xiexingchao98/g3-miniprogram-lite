@@ -1,0 +1,73 @@
+<view class='page' style="padding-bottom: calc(50px + {{ safePaddingBottom }}px)">
+  <view class='user-profile'>
+    <view class="user-profile__header">
+      <!-- 已经登录用户组件 -->
+      <block wx:if='{{ isLogged }}'>
+        <view class="user-profile__basic-data">
+          <view class="user-profile__avatar">
+            <image class='image_type-avatar' src="{{ userInfo.avatarUrl }}" mode="widthFix"></image>
+          </view>
+          <view class="user-profile__nickname">
+            <text class='text_type-nickname'>{{ userInfo.nickName }}</text>
+          </view>
+        </view>
+        <view class="user-profile__social-data">
+          <view class="user-profile__following text text_size-s">{{ following }}</view>
+          <view class="user-profile__follower text text_size-s">{{ follower }}</view>
+        </view>      
+      </block>
+      <!-- 未登录用户组件 -->
+      <block wx:else>
+        <view class="user-login">
+          <button class="button button_size-l button_shape-rounded button_theme-login" open-type='getUserInfo' bind:getuserinfo='doLogin'>登录</button>
+        </view>
+      </block>
+    </view>
+    <block wx:if='{{ isLogged }}'>
+      <view class="user-profile__body">
+        <view class="user-profile__skin-test-history">
+          <i class="material-icons md-24 md-dark">history</i>
+          <text class="text text_size-s">测肤历史</text>
+        </view>
+        <view class="user-profile__skin-state-chart">
+          <i class="material-icons md-24 md-dark">bar_chart</i>
+          <text class="text text_size-s">肤质变化表</text>
+        </view>
+      </view>    
+    </block>
+  </view>
+
+  <view class='my-order'>
+    <view class='my-order__header'>
+      <view class='my-order__title'>我的订单</view>
+      <view class='my-order__view-all'>
+        <text>查看全部</text>
+        <i class="material-icons md-24 md-dark">arrow_right</i>
+      </view>
+    </view>
+
+    <view class='my-order__body'>
+      <block wx:for='{{ orderItemList }}'>
+        <view class='my-order__genre'>
+          <block wx:if='{{ item.icon != null}}'>
+            <i class="material-icons md-24 md-dark">{{ item.icon }}</i>
+          </block>
+          <block wx:else>
+            <image class='icon icon_size-24' mode='aspectFit' src='{{ item.image }}' />
+          </block>
+          <text class="my-order__text">{{ item.text }}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class='app-option'>
+    <view class='app-option__body'>
+      <view wx:for='{{ appOption }}' class="app-option__item" bind:tap="{{ item.event ? item.event : '' }}">
+        <i class="material-icons md-24 md-dark">{{ item.icon }}</i>
+        <text class="app-option__text">{{ item.name }}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

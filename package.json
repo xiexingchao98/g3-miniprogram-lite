@@ -1,0 +1,23 @@
+{
+  "name": "g3-miniprogram-lite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "vant-weapp": "^0.5.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiexingchao98/g3-miniprogram-lite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiexingchao98/g3-miniprogram-lite/issues"
+  },
+  "homepage": "https://github.com/xiexingchao98/g3-miniprogram-lite"
+}

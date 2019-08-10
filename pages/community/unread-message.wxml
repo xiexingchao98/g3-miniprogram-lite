@@ -1,0 +1,9 @@
+<view class="page">
+  <view class="page__hd"></view>
+  <view class="page__bd">
+    <view wx:for='{{ unreadMessageList }}' style='font-size: 9pt; padding: 24rpx; box-shadow: 0 6rpx 18rpx #eee;' class="message {{ item.unread ? '' : 'read'}}">
+      用户 [{{ item.comment_owner_name }}] 在帖子 “{{ item.post_title }}” 中回复了你
+      <navigator url='/pages/post/post?id={{ item.post_id }}' style="text-decoration: underline; color: #009acd;" data-comment-id='{{ item.comment_id }}' bind:tap='markAsRead'>点击查看帖子</navigator>
+    </view>
+  </view>
+</view>
